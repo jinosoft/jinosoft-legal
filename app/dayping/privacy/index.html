@@ -35,7 +35,7 @@
 </section>
 <section>
 <h2>광고 데이터</h2>
-<p>Google 광고 SDK가 광고 관련 데이터를 처리할 수 있습니다.</p>
+<p>모든 광고 요청에 어린이용 제한을 적용하며, 광고 제공에 필요한 데이터가 처리될 수 있습니다.</p>
 </section>
 <section>
 <h2>삭제</h2>
@@ -49,8 +49,9 @@
 </section>
 <section class="section">
 <h2>02. 광고와 동의 관리</h2>
-<p>DayPing은 광고 표시를 위해 Google Mobile Ads SDK(AdMob)를 사용합니다. Google의 SDK 안내에 따르면, 광고 제공·분석·부정행위 방지를 위해 IP 주소, 앱 실행·탭·광고 시청 등의 상호작용 정보, 앱·SDK 성능 및 진단 정보, Android 광고 ID·앱 세트 ID와 해당되는 경우 기기에 로그인한 계정 관련 식별자 등을 자동으로 수집·공유할 수 있습니다. IP 주소는 대략적인 위치 추정에 사용될 수 있습니다.</p>
-<p>Google Mobile Ads SDK가 전송하는 데이터는 전송 중 TLS로 암호화됩니다. Google UMP SDK는 적용되는 지역과 동의 요건에 따라 광고 관련 안내와 동의 선택을 표시하고 그 선택을 처리합니다. 일정 제목이나 일정 내용은 광고 SDK에 제공하지 않습니다.</p>
+<p>DayPing은 광고 표시를 위해 Google Mobile Ads SDK(AdMob)를 사용합니다. 나이 또는 생년월일을 입력받아 사용자를 구분하지 않고, 모든 광고 요청에 어린이용 처리와 G등급 콘텐츠 제한을 적용하며 광고 개인 최적화를 비활성화합니다. 앱은 Android 광고 ID 및 광고 샌드박스 관련 권한을 제거하고 광고 ID를 이용하지 않도록 구성합니다.</p>
+<p>이 제한 설정은 모든 데이터 처리를 없애는 기능은 아닙니다. 광고 제공·성능 측정·부정행위 방지를 위해 Google SDK가 IP 주소, 광고 상호작용, 앱·SDK 진단 정보 및 허용되는 앱·SDK 범위 식별자 등을 처리할 수 있습니다. IP 주소는 대략적인 위치 추정에 사용될 수 있습니다.</p>
+<p>Google Mobile Ads SDK가 전송하는 데이터는 전송 중 TLS로 암호화됩니다. Google UMP SDK에도 모든 사용자에 대해 동의 연령 미만 보호 설정을 전달합니다. 필요한 안내 및 선택 항목은 SDK가 이 설정과 적용 요건에 따라 처리하며, 일반 사용자용 광고 동의를 받기 위해 나이나 생년월일을 수집하지 않습니다. 일정 제목이나 일정 내용은 광고 SDK에 제공하지 않습니다.</p>
 <p>광고 서비스가 처리하는 데이터의 보관 및 삭제에는 해당 제공자의 정책이 적용됩니다. 자세한 내용은 아래 Google 개인정보처리방침과 SDK 데이터 안내에서 확인할 수 있습니다.</p>
 </section>
 <section class="section">
@@ -70,7 +71,7 @@
 </section>
 <section class="section">
 <h2>06. 개인정보 선택과 요청</h2>
-<p>광고 개인정보 선택을 변경해야 하는 경우 앱 설정에 표시되는 ‘광고 개인정보 설정’을 이용할 수 있습니다. 이 메뉴의 표시 여부와 선택 항목은 Google UMP의 요건에 따라 달라집니다. 광고 ID 관련 제어 기능은 기기의 Android 광고 설정에서 확인할 수 있습니다.</p>
+<p>광고 개인정보 선택을 변경해야 하는 경우 앱 설정에 표시되는 ‘광고 개인정보 설정’을 이용할 수 있습니다. 이 메뉴의 표시 여부와 선택 항목은 Google UMP의 요건에 따라 달라집니다. DayPing에는 맞춤형 광고를 켜는 기능이 없으며, 이 제한은 모든 사용자에게 동일하게 적용됩니다.</p>
 <p>개인정보 처리에 관한 문의나 요청은 support@jinosoft.com으로 보내주세요. 기기에만 저장된 일정은 Jinosoft가 대신 조회하거나 삭제할 수 없으므로, 해당 기기의 앱 또는 데이터 삭제 기능을 이용해 주세요.</p>
 </section>
 <section class="section">
@@ -116,7 +117,7 @@
 </section>
 <section>
 <h2>Advertising data</h2>
-<p>Google advertising SDKs may process advertising-related data.</p>
+<p>All ad requests receive child-directed restrictions; data needed for ad delivery may still be processed.</p>
 </section>
 <section>
 <h2>Deletion</h2>
@@ -130,8 +131,9 @@
 </section>
 <section class="section">
 <h2>02. Advertising and consent</h2>
-<p>DayPing uses the Google Mobile Ads SDK (AdMob) to display ads. Google’s SDK documentation describes automatic collection and sharing of IP addresses, interactions such as app launches, taps and ad views, app and SDK performance and diagnostic information, and identifiers such as the Android advertising ID, app set ID and, where applicable, identifiers related to accounts signed in on the device. These data are used for advertising, analytics and fraud prevention. IP addresses may be used to estimate a general location.</p>
-<p>Data transmitted by the Google Mobile Ads SDK are encrypted in transit using TLS. The Google UMP SDK presents and processes advertising notices and consent choices where applicable, depending on region and consent requirements. Reminder titles and content are not provided to advertising SDKs.</p>
+<p>DayPing uses the Google Mobile Ads SDK (AdMob) to display ads. The app does not ask for an age or date of birth to classify users. It applies child-directed treatment and a G content rating limit to every ad request and disables ad personalization. The app removes Android advertising ID and advertising sandbox permissions and is configured not to use the advertising ID.</p>
+<p>These restrictions do not eliminate all data processing. Google’s SDK may process IP addresses, ad interactions, app and SDK diagnostics, and permitted app- or SDK-scoped identifiers for ad delivery, performance measurement and fraud prevention. IP addresses may be used to estimate a general location.</p>
+<p>Data transmitted by the Google Mobile Ads SDK are encrypted in transit using TLS. The app also passes an under-age-of-consent protection setting to Google UMP for all users. UMP handles any required notices and choices according to this setting and applicable requirements. The app does not collect an age or date of birth to obtain standard advertising consent. Reminder titles and content are not provided to advertising SDKs.</p>
 <p>The retention and deletion of data processed by advertising services are governed by the providers’ policies. See the Google Privacy Policy and SDK data disclosure linked below.</p>
 </section>
 <section class="section">
@@ -151,7 +153,7 @@
 </section>
 <section class="section">
 <h2>06. Privacy choices and requests</h2>
-<p>When privacy options are required, you can review advertising choices through Ad privacy settings in the app. The availability of this menu and its options depends on Google UMP requirements. Advertising ID controls are available in your device’s Android ad settings.</p>
+<p>When privacy options are required, you can review advertising choices through Ad privacy settings in the app. The availability of this menu and its options depends on Google UMP requirements. DayPing does not offer a switch to enable personalized ads; the same protective restrictions apply to all users.</p>
 <p>Send privacy questions or requests to support@jinosoft.com. Jinosoft cannot retrieve or delete reminders stored only on your device on your behalf; use the app’s deletion controls or clear its data on that device.</p>
 </section>
 <section class="section">
